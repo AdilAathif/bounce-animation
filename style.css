@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/*------------------- animation ------------------*/
+div.animation{
+    margin-right: 80px;
+    width: 200px;
+    height: 200px;
+    background: #f00;
+    animation-name: bounceIn;
+    animation-duration: 2s;
+    /* animation: bounceIn 2s; */
+}
+@keyframes bounceIn{
+    0%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    60%{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/*------------------ animation-optional --------------*/
+div.animation-optional{
+    width: 200px;
+    height: 200px;
+    background: #00f;
+    animation-name: bounceIn;
+    animation-duration: 2s;
+    
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    /* animation-iteration-count: 2; */
+    animation-iteration-count: infinite;
+    /* animation-direction: normal; */
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; */  /*(normal to reverse)*/
+    animation-direction: alternate-reverse;  /*(reverse to normal)*/
+}
